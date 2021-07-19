@@ -13,7 +13,7 @@ const useStyle = makeStyles((theme: Theme)=> ({
         width: theme.spacing(38),
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: 'white',
+        backgroundColor: '#f1f6fb',
         boxShadow: `1.5px 0 0 0 #f7f7f7`,
     },
     headerHolder: {

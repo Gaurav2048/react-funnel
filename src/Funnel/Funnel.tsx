@@ -17,7 +17,7 @@ const useStyle = makeStyles((theme: Theme)=> ({
         display: 'flex',
         flexDirection: 'row',
         margin: theme.spacing(2, 2),
-        height: '100vh',
+        height: '85vh',
         overflowX: 'scroll',
     },
     filters: {

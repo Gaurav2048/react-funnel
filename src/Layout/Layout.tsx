@@ -7,7 +7,8 @@ import { StoryTabs, StoryTab, TabPanel } from '../Components/Tabs';
 const useStyle = makeStyles((theme: Theme) => ({
     container:{
         height: '100vh',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        backgroundColor: '#f1f6fb',
     },
     root: {
       overflow: 'hidden',
@@ -32,9 +33,18 @@ const useStyle = makeStyles((theme: Theme) => ({
     }
   }))
 
-const Layout: React.FC = (props) => {
+type OwnProps = {
+  currentTab: number;
+  setCurrentTab: React.Dispatch<React.SetStateAction<number>>;
+  children: React.ReactElement | null;
+}
+
+const Layout: React.FC<OwnProps> = ({
+  currentTab,
+  setCurrentTab,
+  children,
+}) => {
     const classes = useStyle();
-    const [currentTab, setCurrentTab] = useState<number>(1);
 
     return <div className={classes.container}>
        <div className={classes.root}>
@@ -47,11 +57,8 @@ const Layout: React.FC = (props) => {
            </div>
            <Avatar src="https://images.pexels.com/photos/2100035/pexels-photo-2100035.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" sizes="27" />
        </div>
-       <TabPanel index={0} value={currentTab}>
-
-        </TabPanel>
-        <TabPanel index={1} value={currentTab}>
-          {props.children}
+        <TabPanel index={currentTab} value={currentTab}>
+          {children}
         </TabPanel>
         
     </div>
