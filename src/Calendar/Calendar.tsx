@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme: Theme)=>({
     },
     event: {
         backgroundColor: theme.palette.common.white,
+        border: 'none',
+        padding: 0,
+
     },
     header: {
         border: 'none !important',
@@ -52,7 +55,7 @@ const Calendar: React.FC = () => {
                   dragScroll={true}
                   eventContent={(props: EventContentArg) => <Event {...props} />}
                   editable
-                  droppable
+                  
                   validRange={{
                       start: '2021-07-11',
                       end: '2021-07-18'
@@ -85,31 +88,41 @@ const events = [
        "id":"7ioo0930t3eht7c7gje3rco0im",
        "startTime":"2021-07-12T12:30:00+05:30",
        "endTime":"2021-07-12T13:30:00+05:30",
-       "summary":"Final qucik call on conclusion remark.",
+       "type": "Scaling",
+       "summary":"Vikram",
+       "index": 'red',
     },
     {
        "id":"7enuintleeoe25moeb2oj1rouc_20210712T093000Z",
+       "type": "Root Canal",
        "startTime":"2021-07-12T15:00:00+05:30",
-       "endTime":"2021-07-12T15:30:00+05:30",
-       "summary":"DelightIQ - Dev Sync-up",
+       "endTime":"2021-07-12T16:30:00+05:30",
+       "summary":"Gunjan",
+       "index": 'green',
     },
     {
        "id":"1ls6s0508jgf3n7q1n92si0tar_20210713T080000Z",
+       "type": "Consulation",
        "startTime":"2021-07-13T13:30:00+05:30",
-       "endTime":"2021-07-13T13:45:00+05:30",
-       "summary":"DIQ - Frontend Daily Sync-up",
+       "endTime":"2021-07-13T14:45:00+05:30",
+       "summary":"Suhash",
+       "index": 'violet',
        
     },
     {
        "id":"7enuintleeoe25moeb2oj1rouc_20210714T093000Z",
+       "type": "Wisdom teeth removal",
        "startTime":"2021-07-14T16:00:00+05:30",
-       "endTime":"2021-07-14T16:30:00+05:30",
-       
+       "endTime":"2021-07-14T17:30:00+05:30",
+       "summary":"Willy",
+       "index": 'green',
     },
     {
        "id":"7enuintleeoe25moeb2oj1rouc_20210716T093000Z",
+       "type": "Bleaching",
        "startTime":"2021-07-16T16:00:00+05:30",
-       "endTime":"2021-07-16T16:30:00+05:30",
-      
+       "endTime":"2021-07-16T18:30:00+05:30",
+       "summary": "Herman",
+       "index": 'blue',
     }
  ];
