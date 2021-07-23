@@ -28,7 +28,7 @@ const Column: React.FC<OwnProps> = ({ columnId, index}) => {
     const column = board.columns[columnId];
 
       const holderStyle = (isDragging: boolean) => ({
-        background: isDragging ? 'lightblue' : 'white',
+        background: isDragging ? 'lightblue' : '#f1f6fb',
       })
 
 return  <Droppable droppableId={column.id} key={column.id}>
