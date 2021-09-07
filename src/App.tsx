@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <Drawer anchor="left" open={open} onClick={handleClose}>
+      <Drawer anchor="left" open={false} onClick={handleClose}>
         dad
         dsassad 
         dsffds
