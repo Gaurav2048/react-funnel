@@ -1,6 +1,6 @@
 {
   "name": "react-funnel-ts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "hompage": "https://Gaurav2048.github.io/react-funnel",
   "dependencies": {
@@ -37,10 +37,10 @@
   },
   "scripts": {
     "prebuild": "npm run build",
-    "deploy": "gh-pages -d build", 
+    "deploy": "gh-pages -d build",
     "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
