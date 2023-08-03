@@ -2,6 +2,7 @@
   "name": "react-funnel-ts",
   "version": "0.1.0",
   "private": true,
+  "hompage": "https://Gaurav2048.github.io/react-funnel",
   "dependencies": {
     "@fullcalendar/interaction": "^5.8.0",
     "@fullcalendar/react": "^5.8.0",
@@ -35,6 +36,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "prebuild": "npm run build",
+    "deploy": "gh-pages -d build", 
     "dev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
